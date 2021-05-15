@@ -1,0 +1,201 @@
+t = ((-1, -1, -1), (0, 0, -1), (1, -1)) 
+eh_tabuleiro(t) 
+#True
+
+t = ((-1, -1, -1), (0, 0, -1), (1, -1, 0))
+eh_tabuleiro(t)
+#False
+
+eh_tabuleiro(3)
+#False
+
+t = ((-1, -1, -1), (1, 1, -1), (0, -1))
+tabuleiro_str(t) 
+#'+-------+\n|...x...|\n|..x.x..|\n|.x.1.x.|\n|..1.0..|\n+-------+'
+
+target = ((-1, -1, -1), (0, 0, -1), (0, -1))
+print(tabuleiro_str(target)) 
+#+-------+
+#|...x...|
+#|..x.x..|
+#|.x.0.x.|
+#|..0.0..|
+#+-------+
+
+print(tabuleiro_str(((-1, -1, -1), (0, 0, -1), (1, -1, 0)))) 
+#Traceback (most recent call last): <...> 
+#builtins.ValueError: tabuleiro_str: argumento invalido 
+
+p1 = ((-1, -1, -1), (1, 1, -1), (0, -1))
+print(tabuleiro_str(p1))
+#+-------+
+|...x...|
+|..x.x..|
+|.x.1.x.|
+|..1.0..|
++-------+ 
+
+tabuleiros_iguais(p1, p1)
+#True
+
+tabuleiros_iguais(p1, target) 
+#False
+
+p2 = ((-1, -1, -1), (0, 0, -1), (0, -1))
+tabuleiros_iguais(p2, target)
+#True
+
+tabuleiros_iguais((-1, -1, -1), target) 
+#Traceback (most recent call last): <...>
+#builtins.ValueError: tabuleiros_iguais: um dos argumentos nao e tabuleiro
+
+tabuleiros_iguais([-1, -1, -1], target)
+#Traceback (most recent call last): <...>
+#builtins.ValueError: tabuleiros_iguais: um dos argumentos nao e tabuleiro
+
+tabuleiros_iguais(tuple(), target)
+#Traceback (most recent call last): <...>
+#builtins.ValueError: tabuleiros_iguais: um dos argumentos nao e tabuleiro
+
+p2 = porta_x(p1,"E")
+print(tabuleiro_str(p2))
++-------+
+|...x...|
+|..x.x..|
+|.x.0.x.|
+|..0.0..| 
++-------+
+
+p3 = porta_x(p2,"D")
+print(tabuleiro_str(p3))
++-------+
+|...x...|
+|..x.x..|
+|.x.1.x.|
+|..0.1..|
++-------+
+
+p = porta_x(p2, "X")
+#Traceback (most recent call last): <...>
+#builtins.ValueError: porta_x: um dos argumentos e invalido
+
+p7 = ((1, -1, 1), (-1, -1, -1), (-1, 0))
+print(tabuleiro_str(p7)) 
++-------+ 
+|...1...| 
+|..x.x..| 
+|.1.x.0.| 
+|..x.x..| 
++-------+
+
+p8 = porta_z(p7, "E")
+print(tabuleiro_str(p8)) 
++-------+ 
+|...0...| 
+|..x.x..| 
+|.0.x.0.|
+|..x.x..| 
++-------+
+
+p9 = porta_z(p8, "D")
+print(tabuleiro_str(p9))
++-------+
+|...1...|
+|..x.x..|
+|.0.x.1.|
+|..x.x..|
++-------+
+
+p = porta_z(p9, "X") 
+#Traceback (most recent call last): <...> 
+#builtins.ValueError: porta_z: um dos argumentos e invalido 
+
+p4 = ((-1, -1, -1), (0, -1, 0), (-1, 0))
+print(tabuleiro_str(p4)) 
++-------+ 
+|...x...| 
+|..x.0..| 
+|.x.x.0.| 
+|..0.x..| 
++-------+
+
+p5 = porta_h(p4, "E")
+print(tabuleiro_str(p5)) 
++-------+ 
+|...0...| 
+|..x.x..| 
+|.0.x.0.| 
+|..x.x..| 
++-------+
+
+p6 = porta_h(p5, "D")
+print(tabuleiro_str(p6)) 
++-------+ 
+|...x...| 
+|..0.x..| 
+|.0.x.x.| 
+|..x.0..| 
++-------+
+
+p = porta_h(p6, "X") 
+#Traceback (most recent call last): 
+#builtins.ValueError: porta_h: um dos argumentos e invalido
+
+t=((-1, -1, -1),(0, 0, -1),(0, -1))
+eh_tabuleiro(t)
+# True
+
+eh_tabuleiro('')
+# False
+
+tabuleiro_str(((-1, -1, -1),(0, 0, -1),(0, -1)))
+#'+-------+\n|...x...|\n|..x.x..|\n|.x.0.x.|\n|..0.0..|\n+-------+'
+
+tabuleiro_str('')
+# ValueError('tabuleiro_str: argumento invalido')
+
+t1=((-1, -1, -1),(0, 0, -1),(0, -1))
+t2=((-1, -1, -1),(0, 0, -1),(0, -1))
+tabuleiros_iguais(t1,t2)
+# True
+
+t1=((-1, -1, -1),(0, 0, -1),(0, -1))
+t2=((-1, -1, -1),(0, 0, -1),(0, 0))
+tabuleiros_iguais(t1,t2)
+# False
+
+t=((-1, -1, -1),(0, 0, -1),(0, -1))
+porta_x(t,'D')
+# ((-1,-1,-1),(0,1,-1),(1,-1))
+
+t=((-1, -1, -1),(0, 0, -1),(0, -1))
+porta_x(t,'E')
+# ((-1,-1,-1),(1,1,-1),(0,-1))
+
+t=((-1,-1,-1),(0,0,-1),(1,-1))
+porta_x(t,1)
+# ValueError('porta_x: um dos argumentos e invalido')
+
+t=((0,-1,1),(-1,-1,-1),(-1,1))
+porta_z(t,'D')
+# ((0,-1,0),(-1,-1,-1),(-1,0))
+
+t=((0,-1,1),(-1,-1,-1),(-1,1))
+porta_z(t,'E')
+# ((1,-1,0),(-1,-1,-1),(-1,1))
+
+porta_x(False,'D')
+# ValueError('porta_z: um dos argumentos e invalido')
+
+t=((0,-1,1),(-1,-1,-1),(-1,1))
+porta_h(t,'D')
+# ((0,1,-1),(-1,-1,-1),(1,-1))
+
+t=((0,-1,1),(-1,-1,-1),(-1,1))
+porta_h(t,'E')
+# ((-1,-1,-1),(0,-1,1),(-1,1))
+
+t=((0,-1,1),(-1,-1,-1),(-1,1))
+porta_h(t,True)
+# ValueError('porta_h: um dos argumentos e invalido')
+ 
