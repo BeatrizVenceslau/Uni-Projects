@@ -1,0 +1,4 @@
+O teclado está por ordem alfabetica.
+Para mudar de ecra é so clicar nos botões inferiores, de cada lado do botão espaço, que representam a primeira e a última letra que aparecem no próximo ecrã.
+Para escolher a palavra sugerida é só clicar na mesma.
+No ecrã principal já aparecem algumas palavras da mais utilizadas.

@@ -1,0 +1,6 @@
+BakeOff2 Grupo2
+
+Alvo Atual: Vermelho com rebordo vermelho escuro
+Próximo Alvo: Rosa
+Próximo Alvo igual ao alvo atual: vermelho com rebordo rosa
+Linha Vermelha: Liga o alvo anterior ao alvo atual
