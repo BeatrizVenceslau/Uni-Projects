@@ -1,0 +1,2 @@
+Fila = [1,0,_,_,0,_], aplica_R1_R2_fila(Fila, N_Fila), escreve_Linha(N_Fila); writeln('falhou').
+Fila = [0,_,1,1,1,0], aplica_R1_R2_fila(Fila, N_Fila), escreve_Linha(N_Fila); writeln('ok -- devia falhar e falhou').

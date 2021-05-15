@@ -1,0 +1,3 @@
+Fila = [1, _, 0, _, 1, 0], aplica_R1_fila_aux(Fila, N_Fila), escreve_Linha(N_Fila); writeln('falhou').
+Fila = [0, _, 0, 1, 1, _], aplica_R1_fila_aux(Fila, N_Fila), escreve_Linha(N_Fila); writeln('falhou').
+Fila = [_, _, 0, _, 1, 1], aplica_R1_fila_aux(Fila, N_Fila), escreve_Linha(N_Fila); writeln('falhou').

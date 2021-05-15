@@ -1,0 +1,1 @@
+puzzle(p0, Puz), inicializa(Puz, N_Puz), escreve_Puzzle(N_Puz); writeln('falhou').

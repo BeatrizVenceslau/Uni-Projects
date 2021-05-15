@@ -1,0 +1,1 @@
+Fila = [0,_,1,1,1,0], aplica_R2_fila(Fila, N_Fila), escreve_Linha(N_Fila); writeln('falhou').

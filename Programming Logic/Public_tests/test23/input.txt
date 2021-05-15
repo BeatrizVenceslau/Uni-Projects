@@ -1,0 +1,2 @@
+Puz = [[0,_,_,1],[0,_,_,1],[1,_,_,_],[1,0,_,_]], propaga_posicoes([(1,2)], Puz, N_Puz), escreve_Puzzle(N_Puz); writeln('falhou').
+puzzle(p0, Puz), propaga_posicoes([(1,2)], Puz, N_Puz), escreve_Puzzle(N_Puz); writeln('falhou').

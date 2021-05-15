@@ -1,0 +1,4 @@
+aplica_R1_triplo([1, _, 1], R), escreve_Linha(R); writeln('falhou').
+aplica_R1_triplo([_, 1, 1], R), escreve_Linha(R); writeln('falhou').
+aplica_R1_triplo([1, 1, _], R), escreve_Linha(R); writeln('falhou').
+aplica_R1_triplo([1, _, 0], R), escreve_Linha(R); writeln('falhou').

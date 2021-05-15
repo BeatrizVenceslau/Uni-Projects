@@ -1,0 +1,1 @@
+Puz = [[0,_,_,1],[0,_,_,1],[1,_,_,_],[1,0,_,_]], escreve_Puzzle(Puz), verifica_R3(Puz); writeln('falhou').

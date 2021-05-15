@@ -1,0 +1,2 @@
+puzzle(p4, Puz), propaga_posicoes([(3,2)], Puz, N_Puz), escreve_Puzzle(N_Puz); writeln('falhou').
+puzzle(p4, Puz), propaga_posicoes([(6,6)], Puz, N_Puz), escreve_Puzzle(N_Puz); writeln('falhou').

@@ -1,0 +1,3 @@
+puzzle(p0, Puz), aplica_R1_R2_puzzle(Puz, N_Puz), escreve_Puzzle(N_Puz);writeln('falhou').
+puzzle(p1, Puz), aplica_R1_R2_puzzle(Puz, N_Puz), escreve_Puzzle(N_Puz);writeln('falhou').
+puzzle(p2, Puz), aplica_R1_R2_puzzle(Puz, N_Puz), escreve_Puzzle(N_Puz);writeln('falhou').

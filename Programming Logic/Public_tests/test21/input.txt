@@ -1,0 +1,2 @@
+Puz = [[0,0,_,1],[_,_,_,_],[_,_,_,_], [1,0,_,_]], escreve_Puzzle(Puz), verifica_R3(Puz); writeln('falhou').
+Puz = [[0,1,0,1],[0,1,0,1],[1,_,_,_], [1,0,_,_]], escreve_Puzzle(Puz), verifica_R3(Puz); writeln('ok -- devia falhar e falhou').
