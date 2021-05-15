@@ -1,0 +1,76 @@
+<html>
+    <meta charset="UTF-8">
+    <body>
+    <p><h2>Operacoes com Prescrições</h2></p>
+    
+    {% if cursor %}
+    <table border="2px">
+      <thead>
+        <tr>
+          <th>Numero de Cédula</th>
+          <th>Numero de Doente</th>
+          <th>Data</th>
+          <th>Substância</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody>      
+        {% for record in cursor %}
+          <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+            <td>{{ record[4] }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p> Erro: ao obter dados da base de dados!</p>
+  {% endif %}
+
+
+    <h3>Inserir Prescrição</h3>
+        <form action="inserirPrescricao" method="post">
+        <p>Numero de Cédula: <input type="text" name="inserir_num_cedula"/></p>
+        <p>Numero de Doente: <input type="text" name="inserir_num_doente"/></p>
+        <p>Data: <input type="date" name="inserir_data"/></p>
+        <p>Substância: <input type="text" name="inserir_substancia"/></p>
+        <p>Quantidade: <input type="text" name="inserir_quantidade"/></p>
+
+        <p><input type="submit" value="Inserir Prescrição"/></p>
+        </form>
+
+
+    <h3>Remover Prescrição</h3>
+        <form action="removerPrescricao" method="post">
+        <p>Numero de Cédula: <input type="text" name="remover_num_cedula"/></p>
+        <p>Numero de Doente: <input type="text" name="remover_num_doente"/></p>
+        <p>Data: <input type="date" name="remover_data"/></p>
+        <p>Substância: <input type="text" name="remover_substancia"/></p>
+
+        <p><input type="submit" value="Remover Prescrição"/></p>
+        </form>
+
+
+    <h3>Editar Prescrição</h3>
+        <form action="editarPrescricao" method="post">
+        <p>Numero de Cédula: <input type="text" name="editar_num_cedula"/>  Novo Numero de Cédula: <input type="text" name="novo_num_cedula"/></p>
+        <p>Numero de Doente: <input type="text" name="editar_num_doente"/>  Novo Numero de Doente: <input type="text" name="novo_num_doente"/></p>
+        <p>Data: <input type="date" name="editar_data"/>  Nova data: <input type="date" name="nova_data"/></p>
+        <p>Substância: <input type="text" name="editar_substancia"/>   Nova substância: <input type="text" name="nova_substancia"/></p>
+        <p>Nova Quantidade: <input type="text" name="editar_quantidade"/></p>
+        <p><input type="submit" value="Editar"/></p>
+        </form>
+
+    <h3>Listar Substancias num dado mês/ano</h3>
+        <form action="listarSub" method="post">
+        <p>Numero de Cédula: <input type="text" name="listar_num_cedula"/></p>
+        <p>Mês: <input type="text" name="mes"/></p>        
+        <p>Ano: <input type="text" name="ano"/></p>        
+        <p><input type="submit" value="Listar"/></p>
+        </form>
+    
+    </body>
+</html>

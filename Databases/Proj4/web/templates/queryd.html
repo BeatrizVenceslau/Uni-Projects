@@ -1,0 +1,23 @@
+<html>
+    <meta charset="UTF-8">
+    <body>
+    {% if cursor %}
+        <table border="2px">
+            <thead>
+            <tr>
+                <th>Substância</th>
+            </tr>
+            </thead>
+            <tbody>      
+            {% for record in cursor %}
+                <tr>
+                <td>{{ record[0] }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p> Erro: ao obter dados da base de dados!</p>
+        {% endif %}
+    </body>
+</html>

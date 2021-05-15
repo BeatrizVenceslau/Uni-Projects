@@ -1,0 +1,52 @@
+<html>
+    <meta charset="UTF-8">
+    <body>
+    <p><h2>Operacoes com Vendas</h2></p>
+
+
+    {% if cursor %}
+    <table border="2px">
+      <thead>
+        <tr>
+          <th>Numero de Venda</th>
+          <th>Data de Registo</th>
+          <th>Substância</th>
+          <th>Quantidade</th>
+          <th>Preço</th>
+          <th>Instituição</th>
+        </tr>
+      </thead>
+      <tbody>      
+        {% for record in cursor %}
+          <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+            <td>{{ record[4] }}</td>
+            <td>{{ record[5] }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p> Erro: ao obter dados da base de dados!</p>
+  {% endif %}
+
+
+    <h3>Registar Venda</h3>
+        <form action="registarVenda" method="post">
+        <p>Numero de Venda: <input type="text" name="num_venda"/></p>
+        <p>Data Registo: <input type="date" name="data_registo"/></p>
+        <p>Substância: <input type="text" name="substancia"/></p>
+        <p>Quantidade: <input type="text" name="quantidade"/></p>
+        <p>Preco: <input type="text" name="preco"/></p>
+        <p>Institução: <input type="text" name="inst"/></p>
+        <p>Numero cedula: <input type="text" name="cedula"/></p>
+        <p>Numero Doente: <input type="text" name="doente"/></p>
+        <p>Data: <input type="date" name="data"/></p>
+        <p><input type="submit" value="Registar Venda"/></p>
+        </form>
+
+    </body>
+</html>

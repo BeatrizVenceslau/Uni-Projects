@@ -1,0 +1,55 @@
+<html>
+    <meta charset="UTF-8">
+    <body>
+    <p><h2>Operacoes com Médicos</h2></p>
+    
+    {% if cursor %}
+    <table border="2px">
+      <thead>
+        <tr>
+          <th>Numero de Cédula</th>
+          <th>Nome</th>
+          <th>Especialidade</th>
+        </tr>
+      </thead>
+      <tbody>      
+        {% for record in cursor %}
+          <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p> Erro: ao obter dados da base de dados!</p>
+  {% endif %}
+
+
+    <h3>Inserir Médico</h3>
+        <form action="inserirMedico" method="post">
+        <p>Número de Cédula: <input type="text" name="inserir_num_cedula"/></p>
+        <p>Nome: <input type="text" name="inserir_nome"/></p>
+        <p>Especialidade: <input type="text" name="inserir_especialidade"/></p>
+        <p><input type="submit" value="Inserir"/></p>
+        </form>
+
+
+    <h3>Remover Médico</h3>
+        <form action="removerMedico" method="post">
+        <p>Número de Cedula: <input type="text" name="remover_num_cedula"/></p>
+        <p><input type="submit" value="Remover"/></p>
+        </form>
+
+
+    <h3>Editar Médico</h3>
+        <form action="editarMedico" method="post">
+        <p>Número de Cédula: <input type="text" name="editar_num_cedula"/> Novo Número de Cédula: <input type="text" name="novo_num_cedula"/></p>
+        <p>Nome: <input type="text" name="editar_nome"/></p>
+        <p>Especialidade: <input type="text" name="editar_especialidade"/></p>
+        <p><input type="submit" value="Editar"/></p>
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+    <meta charset="UTF-8">
+    <body>
+    <p><h2>Operacoes com Instituições</h2></p>
+    
+    {% if cursor %}
+    <table border="2px">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Tipo</th>
+          <th>Regiao</th>
+          <th>Concelho</th>
+        </tr>
+      </thead>
+      <tbody>      
+        {% for record in cursor %}
+          <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p> Erro: ao obter dados da base de dados!</p>
+  {% endif %}
+
+
+    <h3>Inserir Instituição</h3>
+        <form id = "1" action="inserirInstituicao" method="post">
+        <p>Nome: <input type="text" name="nome"/></p>
+        <p>Tipo: <input type="text" name="tipo"/></p>
+        <p>Regiao: <input type="text" name="num_regiao"/></p>
+        <p>Concelho: <input type="text" name="num_concelho"/></p>
+
+        <p><input type="submit" value="Inserir Instituição"/></p>
+        </form>
+
+
+    <h3>Remover Instituição</h3>
+        <form id = "2" action="removerInstituicao" method="post">
+        <p>Nome: <input type="text" name="nome"/></p>
+        <p><input type="submit" value="Remover Instituicao"/></p>
+        </form>
+
+
+    <h3>Editar Instituição</h3>
+        <form id= "3" action="editarInstituicao" method="post">
+        <p>Nome: <input type="text" name="nome"/>  Novo nome: <input type="text" name="novo_nome"/></p>
+        <p>Tipo: <input type="text" name="tipo"/></p>
+        <p>Regiao: <input type="text" name="num_regiao"/></p>
+        <p>Concelho: <input type="text" name="num_concelho"/></p>
+        
+        <p><input type="submit" value="Editar"/></p>
+        </form>
+
+    </body>
+</html>

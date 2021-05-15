@@ -1,0 +1,88 @@
+<html>
+    <meta charset="UTF-8">
+    <body>
+    <p><h2>Operacoes com Análises</h2></p>
+    
+    {% if cursor %}
+    <table border="2px">
+      <thead>
+        <tr>
+            <th>Numero de Análise</th>
+            <th>Especialidade</th>
+            <th>Numero de Cédula</th>
+            <th>Numero de Doente</th>
+            <th>Data</th>
+            <th>Data do Registo</th>
+            <th>Nome da Análise</th>
+            <th>Quantidade</th>
+            <th>Instituição</th>
+        </tr>
+      </thead>
+      <tbody>      
+        {% for record in cursor %}
+          <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+            <td>{{ record[4] }}</td>
+            <td>{{ record[5] }}</td>
+            <td>{{ record[6] }}</td>
+            <td>{{ record[7] }}</td>
+            <td>{{ record[8] }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p> Erro: ao obter dados da base de dados!</p>
+  {% endif %}
+
+
+    <h3>Inserir Análise</h3>
+        <form action="inserirAnalise" method="post">
+        <p>Numero de Análise: <input type="text" name="inserir_num_analise"/></p>
+        <p>Especialidade: <input type="text" name="inserir_especialidade"/></p>
+        <p>Numero de Cédula: <input type="text" name="inserir_num_cedula"/></p>
+        <p>Numero de Doente: <input type="text" name="inserir_num_doente"/></p>
+        <p>Data: <input type="date" name="inserir_data"/></p>        
+        <p>Data do Registo: <input type="date" name="inserir_data_registo"/></p>
+        <p>Nome da Análise: <input type="text" name="inserir_nome"/></p>
+        <p>Quantidade: <input type="text" name="inserir_quant"/></p>
+        <p>Instituição: <input type="text" name="inserir_inst"/></p>
+
+        <p><input type="submit" value="Inserir Análise"/></p>
+        </form>
+
+
+    <h3>Remover Análise</h3>
+        <form action="removerAnalise" method="post">
+        <p>Numero de Análise: <input type="text" name="remover_num_analise"/></p>
+
+        <p><input type="submit" value="Remover Análise"/></p>
+        </form>
+
+
+    <h3>Editar Análise</h3>
+        <form action="editarAnalise" method="post">
+        <p>Numero de Análise: <input type="text" name="editar_num_analise"/> Novo numero de Análise: <input type="text" name="novo_num_analise"/></p>
+        <p>Especialidade: <input type="text" name="editar_especialidade"/></p>
+        <p>Numero de Cédula: <input type="text" name="editar_num_cedula"/></p>
+        <p>Numero de Doente: <input type="text" name="editar_num_doente"/></p>
+        <p>Data: <input type="date" name="editar_data"/></p>        
+        <p>Data do Registo: <input type="date" name="editar_data_registo"/></p>
+        <p>Nome da Análise: <input type="text" name="editar_nome"/></p>
+        <p>Quantidade: <input type="text" name="editar_quant"/></p>
+        <p>Instituição: <input type="text" name="editar_inst"/></p>
+        
+        <p><input type="submit" value="Editar"/></p>
+        </form>
+    
+        <h3>Listar valores de glicémia (maior, menor e doente por concelho)</h3>
+        <form action="alineae" method="post">
+        <p><input type="submit" value="Listar glicémia"/></p>
+        </form>
+
+
+    </body>
+</html>
