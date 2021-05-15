@@ -1,0 +1,233 @@
+;estado inicial
+q0 _ _ r halt-accept
+q0 Q Q r q1
+q0 * * * halt-reject
+
+;aceita o primeiro numero depois do q que tem de ser 0
+q1 0 0 r q2
+q1 1 1 r q2
+q1 2 2 r q2
+q1 3 3 r q2
+q1 4 4 r q2
+q1 5 5 r q2
+q1 6 6 r q2
+q1 7 7 r q2
+q1 8 8 r q2
+q1 9 9 r q2
+;caso os numeros se repitam
+q1 1 1 r q12
+q1 2 2 r q12
+q1 3 3 r q12
+q1 4 4 r q12
+q1 5 5 r q12
+q1 6 6 r q12
+q1 7 7 r q12
+q1 8 8 r q12
+q1 9 9 r q12
+q1 * * * halt-reject
+
+;deixa repetir os numeros as vezes que forem precisas
+q12 0 0 r q12
+q12 1 1 r q12
+q12 2 2 r q12
+q12 3 3 r q12
+q12 4 4 r q12
+q12 5 5 r q12
+q12 6 6 r q12
+q12 7 7 r q12
+q12 8 8 r q12
+q12 9 9 r q12
+
+q12 0 0 r q2
+q12 1 1 r q2
+q12 2 2 r q2
+q12 3 3 r q2
+q12 4 4 r q2
+q12 5 5 r q2
+q12 6 6 r q2
+q12 7 7 r q2
+q12 8 8 r q2
+q12 9 9 r q2
+q12 * * r halt-reject
+;aceita um A
+q2 A A r q3
+q2 * * * halt-reject
+
+;Aceita um numero
+q3 0 0 r q4
+q3 1 1 r q4
+q3 2 2 r q4
+q3 3 3 r q4
+q3 4 4 r q4
+q3 5 5 r q4
+q3 6 6 r q4
+q3 7 7 r q4
+q3 8 8 r q4
+q3 9 9 r q4
+
+q3 0 0 r q13
+q3 1 1 r q13
+q3 2 2 r q13
+q3 3 3 r q13
+q3 4 4 r q13
+q3 5 5 r q13
+q3 6 6 r q13
+q3 7 7 r q13
+q3 8 8 r q13
+q3 9 9 r q13
+q3 * * * halt-reject
+
+q13 0 0 r q13
+q13 1 1 r q13
+q13 2 2 r q13
+q13 3 3 r q13
+q13 4 4 r q13
+q13 5 5 r q13
+q13 6 6 r q13
+q13 7 7 r q13
+q13 8 8 r q13
+q13 9 9 r q13
+
+q13 0 0 r q4
+q13 1 1 r q4
+q13 2 2 r q4
+q13 3 3 r q4
+q13 4 4 r q4
+q13 5 5 r q4
+q13 6 6 r q4
+q13 7 7 r q4
+q13 8 8 r q4
+q13 9 9 r q4
+
+;aceita um Q ou um Y e N
+q4 Q Q r q5
+q4 Y Y r q10
+q4 N N r q11
+q4 * * * halt-reject
+
+
+;aceita um numero depois do Q
+q5 0 0 r q6
+q5 1 1 r q6
+q5 2 2 r q6
+q5 3 3 r q6
+q5 4 4 r q6
+q5 5 5 r q6
+q5 6 6 r q6
+q5 7 7 r q6
+q5 8 8 r q6
+q5 9 9 r q6
+
+q5 1 1 r q14
+q5 2 2 r q14
+q5 3 3 r q14
+q5 4 4 r q14
+q5 5 5 r q14
+q5 6 6 r q14
+q5 7 7 r q14
+q5 8 8 r q14
+q5 9 9 r q14
+q5 * * * halt-reject
+
+q14 0 0 r q14
+q14 1 1 r q14
+q14 2 2 r q14
+q14 3 3 r q14
+q14 4 4 r q14
+q14 5 5 r q14
+q14 6 6 r q14
+q14 7 7 r q14
+q14 8 8 r q14
+q14 9 9 r q14
+
+q14 0 0 r q6
+q14 1 1 r q6
+q14 2 2 r q6
+q14 3 3 r q6
+q14 4 4 r q6
+q14 5 5 r q6
+q14 6 6 r q6
+q14 7 7 r q6
+q14 8 8 r q6
+q14 9 9 r q6
+q14 * * r halt-reject
+
+
+;aceita um A
+q6 A A r q7
+q6 * * * halt-reject
+
+
+;aceita numero depois do A
+q7 0 0 r q8
+q7 1 1 r q8
+q7 2 2 r q8
+q7 3 3 r q8
+q7 4 4 r q8
+q7 5 5 r q8
+q7 6 6 r q8
+q7 7 7 r q8
+q7 8 8 r q8
+q7 9 9 r q8
+
+q7 0 0 r q15
+q7 1 1 r q15
+q7 2 2 r q15
+q7 3 3 r q15
+q7 4 4 r q15
+q7 5 5 r q15
+q7 6 6 r q15
+q7 7 7 r q15
+q7 8 8 r q15
+q7 9 9 r q15
+q7 * * * halt-reject
+
+q15 0 0 r q15
+q15 1 1 r q15
+q15 2 2 r q15
+q15 3 3 r q15
+q15 4 4 r q15
+q15 5 5 r q15
+q15 6 6 r q15
+q15 7 7 r q15
+q15 8 8 r q15
+q15 9 9 r q15
+
+q15 0 0 r q8
+q15 1 1 r q8
+q15 2 2 r q8
+q15 3 3 r q8
+q15 4 4 r q8
+q15 5 5 r q8
+q15 6 6 r q8
+q15 7 7 r q8
+q15 8 8 r q8
+q15 9 9 r q8
+q15 * * r halt-reject
+
+
+;aceita o movimento da fita
+q8 R R r q9
+q8 L L r q9
+q8 S S r q9
+q8 * * * halt-reject
+
+;se acabar o input, aceitar, se aparecer ponto e virgula, passar a palavra seguinte
+q9 _ _ r halt-accept
+q9 ; ; r q0
+q9 * * * halt-reject
+
+;se recebeu um y, vai po A final
+q10 Y Y r q6
+q10 * * * halt-reject
+
+;se recebeu um n, vai po A final
+q11 N N r q6
+q11 * * * halt-reject
+
+
+
+
+
+
+

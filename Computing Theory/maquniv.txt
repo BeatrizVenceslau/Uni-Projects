@@ -1,0 +1,121 @@
+;fita 1: codigo da maquina
+;fita 2:primeira parte de cada transicao
+;fita 3:segunda parte
+;fita 4:
+;fita 5:
+;fita 6:output
+
+
+;passa a maquina para a fita 2
+q0 $_____ $_____ rsssss halt-accept
+q0 Q_____ QQ____ rrssss q0
+q0 A_____ AA____ rrssss q1
+q0 0_____ 00____ rrssss q0
+q0 1_____ 11____ rrssss q0
+q0 2_____ 22____ rrssss q0
+q0 3_____ 33____ rrssss q0
+q0 4_____ 44____ rrssss q0
+q0 5_____ 55____ rrssss q0
+q0 6_____ 66____ rrssss q0
+q0 7_____ 77____ rrssss q0
+q0 8_____ 88____ rrssss q0
+q0 9_____ 99____ rrssss q0
+
+q1 0_____ 00____ rrssss q2
+q1 1_____ 11____ rrssss q2
+q1 2_____ 22____ rrssss q2
+q1 3_____ 33____ rrssss q2
+q1 4_____ 44____ rrssss q2
+q1 5_____ 55____ rrssss q2
+q1 6_____ 66____ rrssss q2
+q1 7_____ 77____ rrssss q2
+q1 8_____ 88____ rrssss q2
+q1 9_____ 99____ rrssss q2
+
+
+;passa o input para a fita 2, mas deixa um "buraco na 1"
+q2 Q_____ Q_Q___ rsrsss q2
+q2 A_____ A_A___ rsrsss q2
+q2 Y_____ Y_Y___ rsrsss q2
+q2 N_____ N_N___ rsrsss q2
+q2 R_____ R_____ rsssss q2
+q2 L_____ L_____ rsssss q2
+q2 S_____ S_____ rsssss q2
+q2 ;_____ ;_____ rsssss q0
+q2 $_____ $_____ rsssss q3
+
+q2 0_____ 0_0___ rsrsss q2
+q2 1_____ 1_1___ rsrsss q2
+q2 2_____ 2_2___ rsrsss q2
+q2 3_____ 3_3___ rsrsss q2
+q2 4_____ 4_4___ rsrsss q2
+q2 5_____ 5_5___ rsrsss q2
+q2 6_____ 6_6___ rsrsss q2
+q2 7_____ 7_7___ rsrsss q2
+q2 8_____ 8_8___ rsrsss q2
+q2 9_____ 9_9___ rsrsss q2
+
+
+q3 ______ ______ ssssss q4
+q3 A_____ A__A__ rssrss q3
+q3 0_____ 0__0__ rssrss q3
+q3 1_____ 1__1__ rssrss q3
+q3 2_____ 2__2__ rssrss q3
+q3 3_____ 3__3__ rssrss q3
+q3 4_____ 4__4__ rssrss q3
+q3 5_____ 5__5__ rssrss q3
+q3 6_____ 6__6__ rssrss q3
+q3 7_____ 7__7__ rssrss q3
+q3 8_____ 8__8__ rssrss q3
+q3 9_____ 9__9__ rssrss q3
+
+q4 ______ ____Q_ ssssrs q5
+q5 ______ ____0_ sllsls q6
+
+q6 _Q____ _Q____ slssss q6
+q6 _A____ _A____ slssss q6
+q6 _0____ _0____ slssss q6
+q6 _1____ _1____ slssss q6
+q6 _2____ _2____ slssss q6
+q6 _3____ _3____ slssss q6
+q6 _4____ _4____ slssss q6
+q6 _5____ _5____ slssss q6
+q6 _6____ _6____ slssss q6
+q6 _7____ _7____ slssss q6
+q6 _8____ _8____ slssss q6
+q6 _9____ _9____ slssss q6
+q6 ______ ______ slssss q7
+
+
+q7 __N___ __Y___ sslsss q7
+q7 __Y___ __N___ sslsss q7
+q7 __Q___ __Q___ sslsss q7
+q7 __A___ __A___ sslsss q7
+q7 __0___ __0___ sslsss q7
+q7 __1___ __1___ sslsss q7
+q7 __2___ __2___ sslsss q7
+q7 __3___ __3___ sslsss q7
+q7 __4___ __4___ sslsss q7
+q7 __5___ __5___ sslsss q7
+q7 __6___ __6___ sslsss q7
+q7 __7___ __7___ sslsss q7
+q7 __8___ __8___ sslsss q7
+q7 __9___ __9___ sslsss q7
+q7 ______ ______ sslsss q8
+
+q8 ______ ______ sssrss q9
+q8 ___A__ ___A__ ssslss q8
+q8 ___0__ ___0__ ssslss q8
+q8 ___1__ ___1__ ssslss q8
+q8 ___2__ ___2__ ssslss q8
+q8 ___3__ ___3__ ssslss q8
+q8 ___4__ ___4__ ssslss q8
+q8 ___5__ ___5__ ssslss q8
+q8 ___6__ ___6__ ssslss q8
+q8 ___7__ ___7__ ssslss q8
+q8 ___8__ ___8__ ssslss q8
+q8 ___9__ ___9__ ssslss q8
+
+
+
+
