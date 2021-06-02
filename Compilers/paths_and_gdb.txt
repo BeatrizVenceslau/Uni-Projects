@@ -1,0 +1,15 @@
+export CVS_RSH=ssh
+export CVSROOT=:ext:ist193734@sigma.ist.utl.pt:/afs/ist.utl.pt/groups/leic-co/co21/t/cvs/049
+
+PATH=~/compiladores/root/usr/bin/:$PATH
+export PATH
+
+Run tests:
+./fir tests-fir-daily/A-01-1-N-ok.fir
+yasm -felf32 tests-fir-daily/A-01-1-N-ok.asm
+ld -L/home/beatriz/COMP/Librts5-202002022020/librts5-202002022020 -m elf_i386 -o executavel A-01-1-N-ok.o -lrts
+
+Debug with gdb:
+gdb ./fir
+r --target asm tests-fir-daily/A-01-1-N-ok.fir
+bt - backtracing
