@@ -1,0 +1,23 @@
+1. Add tokens to scanner and declare them in parser
+---5p---
+
+2. Add needed instructions
+   Add node to ast
+   Declare names of added instructions
+---12p---
+   
+3. Do xml_writer quick
+
+4. Add all needed methods and write frame_s_c
+
+5. Do typechecker
+Ver tipo elemento sequence:
+   int last = node->exprs()->size()-1;
+   cdk::expression_node *arg = dynamic_cast<cdk::expression_node*>(node->exprs()->node(last));
+
+6. Do postfix_writer
+---20p---
+
+
+*****************
+

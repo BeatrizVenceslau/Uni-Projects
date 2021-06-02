@@ -1,0 +1,36 @@
+== CONTEXTO ==
+
+Este enunciado expande a linguagem FIR. As alterações são realizadas sobre a
+versão de 2021/05/28 17:00. O teste realiza-se estritamente de forma individual
+(violações conduzem a reprovação imediata).
+
+Se aquela versão do projecto não contiver algum aspecto necessário para a
+resolução do teste prático, toda a implementação deve ser realizada no contexto
+do teste, como se da execução do projecto se tratasse. A não existência de
+alguns aspectos não é limitação intrínseca à implementação deste teste.
+
+== NOVA INSTRUÇÃO A ADICIONAR AO COMPILADOR ==
+
+A instrução seguinte permite executar uma função sobre cada elemento de uma
+zona de memória indexável por um ponteiro. A função a aplicar deve ter um único
+argumento do mesmo tipo dos elementos indexados. Além da função e da expressão
+que descreve o início da zona de memória, a instrução aceita as expressões
+correspondentes aos índices dos extremos do intervalo a processar.
+
+     with <vector-base> apply <function-name> in <low> .. <high>
+
+Os elementos entre < e > denotam partes variáveis da instrução.
+
+Note-se que .. é um elemento lexical atómico.
+
+Altere o compilador para que suporte esta instrução (especificações Flex e
+Bison, criação de nós, processamento semântico e geração de código).
+
+== EXEMPLO ==
+
+void show(float element) { writeln element; }
+
+void f(<float> vector, int size) {
+  !! "show" aplicado a cada elemento da zona de memória
+  with vector + 1 apply show in size / 3 .. size / 2;
+}
