@@ -1,13 +1,13 @@
 /*
- * File:  aux.h
+ * File:  auxiliar.h
  * Author:  Beatriz Venceslau ist193734
  * Description: Estruturas.
  *              Constantes.
  *              Declaracoes de funcoes auxiliares.
 */
 
-#ifndef AUX_H
-#define AUX_H
+#ifndef AUXILIAR_H
+#define AUXILIAR_H
 
 #include <stdlib.h>
 #include <stddef.h>
