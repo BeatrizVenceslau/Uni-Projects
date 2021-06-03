@@ -13,7 +13,7 @@ The 3 features were:
   **Multiple Choice Questions**
   - *Goal:* Extend current Multiple Choice Questions so there can be more than 1 correct answer, and the correct answers can be ordered by relevance.
   
-  **Item Combination Questions - My Subgroup**
+  **Item Combination Questions (My Subgroup)**
   - *Goal:* Support Item Combination Questions in witch given 2 groups of items they can be related two by two. One item can be related with several other items , but does not need to be related at all.
 
 3rd Year, 2nd Semester
