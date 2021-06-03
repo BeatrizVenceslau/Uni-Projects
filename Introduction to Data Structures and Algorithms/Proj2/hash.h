@@ -8,7 +8,7 @@
 #ifndef HASH_H
 #define HASH_H
 
-#include "aux.h"
+#include "auxiliar.h"
 #include "hash.h"
 
 /*variaveis globais*/
