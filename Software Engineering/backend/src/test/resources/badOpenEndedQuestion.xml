@@ -1,0 +1,9 @@
+<questions>
+  <question courseType="TECNICO" courseName="Course 1 Name" key="1" content="Question 1 Content&#xA; ![image][image]&#xA; question content" title="Question 1 Title" status="AVAILABLE" creationDate="2021-03-26T06:36:51.697884Z" type="open_ended">
+    <image width="20" url="Image 1 URL" />
+    <defaultCorrectAnswer>                          
+                              
+           
+                  </defaultCorrectAnswer> <!-- Whitespace only -->
+  </question>
+</questions>
