@@ -1,10 +1,10 @@
 /*
- * File:  aux.c
+ * File:  auxiliar.c
  * Author:  Beatriz Venceslau ist193734
  * Description: Funcoes auxiliares aos comandos e as funcoes das Hashtables.
 */
 
-#include "aux.h"
+#include "auxiliar.h"
 #include "hash.h"
 
 /*cria um novo node Game*/
