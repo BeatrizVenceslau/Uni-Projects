@@ -6,7 +6,7 @@
  *              Contem as funcoes principais dos comandos e as suas declaracoes.
 */
 
-#include "aux.h"
+#include "auxiliar.h"
 #include "hash.h"
 
 /*declaracoes das funcoes dos comandos*/
