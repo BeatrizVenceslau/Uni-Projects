@@ -1,0 +1,293 @@
+1,2c1,2
+< }
+< > Enrollments are already open.
+---
+> > The action completed successfully.
+> 
+4c4
+< 	capacity=3,
+---
+> 	capacity=1,
+6,14c6
+< 	enrolled=[
+< 		Student{
+< 			Id='aluno1000',
+< 			Name='Cristina Ferreira'
+< 		}, 
+< 		Student{
+< 			Id='aluno1001',
+< 			Name='Manuel Goucha'
+< 		}],
+---
+> 	enrolled=[],
+16a9
+> 
+[0;31m01-professor: Failed.
+1,8d0
+< 			Id='aluno1001',
+< 			Name='Manuel Goucha'
+< 		}],
+< 	discarded=[]
+< }
+< > The action completed successfully.
+< > ClassState{
+< 	capacity=3,
+14,17d5
+< 		}, 
+< 		Student{
+< 			Id='aluno1001',
+< 			Name='Manuel Goucha'
+20a9
+> 
+[0;31m02-student: Failed.
+1,12d0
+< 			Id='aluno1000',
+< 			Name='Cristina Ferreira'
+< 		}, 
+< 		Student{
+< 			Id='aluno1001',
+< 			Name='Manuel Goucha'
+< 		}],
+< 	discarded=[]
+< }
+< > The action completed successfully.
+< > ClassState{
+< 	capacity=3,
+18,21d5
+< 		}, 
+< 		Student{
+< 			Id='aluno1001',
+< 			Name='Manuel Goucha'
+24a9
+> 
+[0;31m03-student: Failed.
+0a1,4
+> > ClassState{
+> 	capacity=1,
+> 	openEnrollments=true,
+> 	enrolled=[
+4,7d7
+< 		}, 
+< 		Student{
+< 			Id='aluno1001',
+< 			Name='Manuel Goucha'
+10a11
+> 
+12c13,15
+< > The student does not exist.
+---
+> 
+> > The action completed successfully.
+> 
+14c17
+< 	capacity=3,
+---
+> 	capacity=1,
+16c19,20
+< 	enrolled=[
+---
+> 	enrolled=[],
+> 	discarded=[
+20,25c24
+< 		}, 
+< 		Student{
+< 			Id='aluno1001',
+< 			Name='Manuel Goucha'
+< 		}],
+< 	discarded=[]
+---
+> 		}]
+26a26
+> 
+[0;31m04-professor: Failed.
+1,6d0
+< Student
+< aluno1001 Manuel Goucha
+< Available Commands:
+< 	list
+< 	enroll
+< 	exit
+8,9c2,3
+< 	capacity=0,
+< 	openEnrollments=false,
+---
+> 	capacity=1,
+> 	openEnrollments=true,
+11c5,9
+< 	discarded=[]
+---
+> 	discarded=[
+> 		Student{
+> 			Id='aluno1000',
+> 			Name='Cristina Ferreira'
+> 		}]
+12a11
+> 
+13a13
+> 
+15,18c15,26
+< 	capacity=0,
+< 	openEnrollments=false,
+< 	enrolled=[],
+< 	discarded=[]
+---
+> 	capacity=1,
+> 	openEnrollments=true,
+> 	enrolled=[
+> 		Student{
+> 			Id='aluno1001',
+> 			Name='Manuel Goucha'
+> 		}],
+> 	discarded=[
+> 		Student{
+> 			Id='aluno1000',
+> 			Name='Cristina Ferreira'
+> 		}]
+19a28
+> 
+[0;31m05-student: Failed.
+2,5c2,13
+< 	capacity=0,
+< 	openEnrollments=false,
+< 	enrolled=[],
+< 	discarded=[]
+---
+> 	capacity=1,
+> 	openEnrollments=true,
+> 	enrolled=[
+> 		Student{
+> 			Id='aluno1001',
+> 			Name='Manuel Goucha'
+> 		}],
+> 	discarded=[
+> 		Student{
+> 			Id='aluno1000',
+> 			Name='Cristina Ferreira'
+> 		}]
+7c15,17
+< > Enrollments are already closed.
+---
+> 
+> > The action completed successfully.
+> 
+9c19
+< 	capacity=0,
+---
+> 	capacity=1,
+11,12c21,30
+< 	enrolled=[],
+< 	discarded=[]
+---
+> 	enrolled=[
+> 		Student{
+> 			Id='aluno1001',
+> 			Name='Manuel Goucha'
+> 		}],
+> 	discarded=[
+> 		Student{
+> 			Id='aluno1000',
+> 			Name='Cristina Ferreira'
+> 		}]
+13a32
+> 
+[0;31m06-professor: Failed.
+1,6d0
+< Student
+< aluno1000 Cristina Ferreira
+< Available Commands:
+< 	list
+< 	enroll
+< 	exit
+8c2
+< 	capacity=0,
+---
+> 	capacity=1,
+10,11c4,13
+< 	enrolled=[],
+< 	discarded=[]
+---
+> 	enrolled=[
+> 		Student{
+> 			Id='aluno1001',
+> 			Name='Manuel Goucha'
+> 		}],
+> 	discarded=[
+> 		Student{
+> 			Id='aluno1000',
+> 			Name='Cristina Ferreira'
+> 		}]
+13c15,17
+< > The action completed successfully.
+---
+> 
+> > Enrollments are already closed.
+> 
+15c19
+< 	capacity=0,
+---
+> 	capacity=1,
+17,18c21,30
+< 	enrolled=[],
+< 	discarded=[]
+---
+> 	enrolled=[
+> 		Student{
+> 			Id='aluno1001',
+> 			Name='Manuel Goucha'
+> 		}],
+> 	discarded=[
+> 		Student{
+> 			Id='aluno1000',
+> 			Name='Cristina Ferreira'
+> 		}]
+19a32
+> 
+[0;31m07-student: Failed.
+1,6d0
+< Admin
+< Available Commands:
+< 	dump
+< 	activate
+< 	deactivate
+< 	exit
+8,11c2,13
+< 	capacity=2,
+< 	openEnrollments=true,
+< 	enrolled=[],
+< 	discarded=[]
+---
+> 	capacity=1,
+> 	openEnrollments=false,
+> 	enrolled=[
+> 		Student{
+> 			Id='aluno1001',
+> 			Name='Manuel Goucha'
+> 		}],
+> 	discarded=[
+> 		Student{
+> 			Id='aluno1000',
+> 			Name='Cristina Ferreira'
+> 		}]
+12a15
+> 
+14,17c17,28
+< 	capacity=2,
+< 	openEnrollments=true,
+< 	enrolled=[],
+< 	discarded=[]
+---
+> 	capacity=1,
+> 	openEnrollments=false,
+> 	enrolled=[
+> 		Student{
+> 			Id='aluno1001',
+> 			Name='Manuel Goucha'
+> 		}],
+> 	discarded=[
+> 		Student{
+> 			Id='aluno1000',
+> 			Name='Cristina Ferreira'
+> 		}]
+18a30
+> 
+[0;31m08-admin: Failed.
