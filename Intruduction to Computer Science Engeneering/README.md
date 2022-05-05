@@ -1,4 +1,4 @@
-# Intruduction to Informatics Engeneering
+# Intruduction to Computer Science Engeneering
 
 Introduction to Computer Science Engeneering from an ethical standpoint as well as its uses
 
