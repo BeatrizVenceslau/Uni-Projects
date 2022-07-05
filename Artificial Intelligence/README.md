@@ -11,7 +11,7 @@ python3 takuzu.py < testes-takuzu/input_T01
 ```
 
 The file tester.py tests all the tests in a specefied folder.
-To run a different folder change directly in the tester.py file.
+Only testes-takuzu folder has been added to the repository.
 
 
 To run all testes (all tests will fail if the time is not printed after the board):
