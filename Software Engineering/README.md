@@ -18,4 +18,4 @@ The 3 features were:
 
 3rd Year, 2nd Semester
 
-Notes: Unfortunatly, given an overload of other projects, we were only able to complete some of the tasks given for this project.
+Notes: Unfortunatly, due to a big workload on other projects, we were only able to complete some of the tasks given for this project.
